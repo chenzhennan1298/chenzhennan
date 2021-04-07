@@ -1,0 +1,41 @@
+{
+  "70a7e06793e7e36572fafa422c5c4b2f" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "496e9b184afb6104",
+      "status" : "passed",
+      "time" : {
+        "start" : 1617156918428,
+        "stop" : 1617156918717,
+        "duration" : 289
+      }
+    } ]
+  },
+  "507ad3b36a7990507d41d179facc885d" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "806b431e4e4d6eb4",
+      "status" : "broken",
+      "statusDetails" : "UnboundLocalError: local variable 'res' referenced before assignment",
+      "time" : {
+        "start" : 1617330995576,
+        "stop" : 1617330995592,
+        "duration" : 16
+      }
+    } ]
+  }
+}

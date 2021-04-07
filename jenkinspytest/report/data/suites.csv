@@ -1,0 +1,3 @@
+"Status","Name","Duration in ms","Description"
+"passed","cases.登录.test_login.TestSignin#test_login","289",""
+"broken","cases.signin.test_login.TestSignin#test_login","16",""

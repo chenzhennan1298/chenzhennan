@@ -1,0 +1,25 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "UnboundLocalError: local variable 'res' referenced before assignment",
+      "children" : [ {
+        "name" : "test_login",
+        "uid" : "806b431e4e4d6eb4",
+        "parentUid" : "d314fd46958cebaac55f70c3abed454c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1617330995576,
+          "stop" : 1617330995592,
+          "duration" : 16
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "d314fd46958cebaac55f70c3abed454c"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ]
+}

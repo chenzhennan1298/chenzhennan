@@ -1,0 +1,41 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "pactera1119",
+    "children" : [ {
+      "name" : "13540-MainThread",
+      "children" : [ {
+        "name" : "test_login",
+        "uid" : "496e9b184afb6104",
+        "parentUid" : "578c5b5a11417e44fddc025528d7ed6b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1617156918428,
+          "stop" : 1617156918717,
+          "duration" : 289
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "578c5b5a11417e44fddc025528d7ed6b"
+    }, {
+      "name" : "4880-MainThread",
+      "children" : [ {
+        "name" : "test_login",
+        "uid" : "806b431e4e4d6eb4",
+        "parentUid" : "9ba372caf38a777c89d4a784d0022130",
+        "status" : "broken",
+        "time" : {
+          "start" : 1617330995576,
+          "stop" : 1617330995592,
+          "duration" : 16
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "9ba372caf38a777c89d4a784d0022130"
+    } ],
+    "uid" : "0b009a6a0e43e61a2900299f5a704018"
+  } ]
+}

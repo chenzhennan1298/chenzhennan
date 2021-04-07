@@ -1,0 +1,37 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "登录",
+    "children" : [ {
+      "name" : "test_login",
+      "uid" : "496e9b184afb6104",
+      "parentUid" : "6e12e06fb17fec92464fd1fd24bca881",
+      "status" : "passed",
+      "time" : {
+        "start" : 1617156918428,
+        "stop" : 1617156918717,
+        "duration" : 289
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "6e12e06fb17fec92464fd1fd24bca881"
+  }, {
+    "name" : "signin",
+    "children" : [ {
+      "name" : "test_login",
+      "uid" : "806b431e4e4d6eb4",
+      "parentUid" : "2893d0ac8335af36d317d371aae42b15",
+      "status" : "broken",
+      "time" : {
+        "start" : 1617330995576,
+        "stop" : 1617330995592,
+        "duration" : 16
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "2893d0ac8335af36d317d371aae42b15"
+  } ]
+}

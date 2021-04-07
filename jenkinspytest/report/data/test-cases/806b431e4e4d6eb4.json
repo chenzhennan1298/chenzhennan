@@ -1,0 +1,124 @@
+{
+  "uid" : "806b431e4e4d6eb4",
+  "name" : "test_login",
+  "fullName" : "cases.signin.test_login.TestSignin#test_login",
+  "historyId" : "507ad3b36a7990507d41d179facc885d",
+  "time" : {
+    "start" : 1617330995576,
+    "stop" : 1617330995592,
+    "duration" : 16
+  },
+  "status" : "broken",
+  "statusMessage" : "UnboundLocalError: local variable 'res' referenced before assignment",
+  "statusTrace" : "self = <cases.signin.test_login.TestSignin object at 0x000002BE6AC3D820>\n\n    def test_login(self):\n        log.info(\"--------开始测试\")\n>       res = self.login.signin(\"lgd\",\"risk@2019\")\n\ncases\\signin\\test_login.py:23: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\napi\\login\\sign_in.py:12: in signin\n    res = self.send_api_data(self.api_path,p_data,sub=None)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <api.login.sign_in.Signin object at 0x000002BE69E61C10>, path = 'E:\\\\python_work\\\\jenkinspytest\\\\data\\\\login\\\\login.yml'\np_data = {'ip': '172.19.66.105:9000', 'password': 'risk@2019', 'username': 'lgd'}, sub = None\n\n    def send_api_data(self, path, p_data, sub):\n        \"\"\"\n        1.进一步优化封装请求，是本框架的第二个核心技术要点\n        2.解决了如何非必填字段的问题，接口测试的非必填字段，只需要传入None值就好\n        2.1 本方法就是解决如何传入None的问题\n        :param path: 存放yml的api数据的相对路径\n        :param p_data: Template模板里面，二次转化的数据\n        :param sub: yml的二级数据目录，区别同一个api类中不同的api方法，比如add，delete\n        :return: 返回请求体的字典类型\n        \"\"\"\n        # 链接根路径和yml文件的相对路径，简化文件路径\n        path = os.path.join(self.Base_Path, path)\n        # 获取请求数据\n        data = self.template(path, p_data, sub)\n        log.info(f\"api模板改变的参数为：{p_data}\")\n        # 由于Template转化的数据都是字符串，None也会变成'None'，通过下面的方法解决这个问题\n        # 防止有些请求没有请求体的，不然就报错了\n        try:\n            for i in data['json'].keys():\n                if data['json'][i] == 'None':\n                    data['json'][i] = None\n        except:\n            pass\n        log.info(f\"修改后的请求为：{data}\")\n>       log.info((f\"响应为：{res}\"))\nE       UnboundLocalError: local variable 'res' referenced before assignment\n\napi\\base_api.py:170: UnboundLocalError",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "xunit_setup_class_fixture_TestSignin",
+    "time" : {
+      "start" : 1617330995553,
+      "stop" : 1617330995553,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "UnboundLocalError: local variable 'res' referenced before assignment",
+    "statusTrace" : "self = <cases.signin.test_login.TestSignin object at 0x000002BE6AC3D820>\n\n    def test_login(self):\n        log.info(\"--------开始测试\")\n>       res = self.login.signin(\"lgd\",\"risk@2019\")\n\ncases\\signin\\test_login.py:23: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\napi\\login\\sign_in.py:12: in signin\n    res = self.send_api_data(self.api_path,p_data,sub=None)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <api.login.sign_in.Signin object at 0x000002BE69E61C10>, path = 'E:\\\\python_work\\\\jenkinspytest\\\\data\\\\login\\\\login.yml'\np_data = {'ip': '172.19.66.105:9000', 'password': 'risk@2019', 'username': 'lgd'}, sub = None\n\n    def send_api_data(self, path, p_data, sub):\n        \"\"\"\n        1.进一步优化封装请求，是本框架的第二个核心技术要点\n        2.解决了如何非必填字段的问题，接口测试的非必填字段，只需要传入None值就好\n        2.1 本方法就是解决如何传入None的问题\n        :param path: 存放yml的api数据的相对路径\n        :param p_data: Template模板里面，二次转化的数据\n        :param sub: yml的二级数据目录，区别同一个api类中不同的api方法，比如add，delete\n        :return: 返回请求体的字典类型\n        \"\"\"\n        # 链接根路径和yml文件的相对路径，简化文件路径\n        path = os.path.join(self.Base_Path, path)\n        # 获取请求数据\n        data = self.template(path, p_data, sub)\n        log.info(f\"api模板改变的参数为：{p_data}\")\n        # 由于Template转化的数据都是字符串，None也会变成'None'，通过下面的方法解决这个问题\n        # 防止有些请求没有请求体的，不然就报错了\n        try:\n            for i in data['json'].keys():\n                if data['json'][i] == 'None':\n                    data['json'][i] = None\n        except:\n            pass\n        log.info(f\"修改后的请求为：{data}\")\n>       log.info((f\"响应为：{res}\"))\nE       UnboundLocalError: local variable 'res' referenced before assignment\n\napi\\base_api.py:170: UnboundLocalError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "269e5edeaac89af1",
+      "name" : "log",
+      "source" : "269e5edeaac89af1.txt",
+      "type" : "text/plain",
+      "size" : 542
+    }, {
+      "uid" : "60bcc965236bf5f4",
+      "name" : "stdout",
+      "source" : "60bcc965236bf5f4.txt",
+      "type" : "text/plain",
+      "size" : 47
+    }, {
+      "uid" : "f7600344792d9cc5",
+      "name" : "stderr",
+      "source" : "f7600344792d9cc5.txt",
+      "type" : "text/plain",
+      "size" : 547
+    } ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "attachmentsCount" : 3
+  },
+  "afterStages" : [ {
+    "name" : "xunit_setup_class_fixture_TestSignin::0",
+    "time" : {
+      "start" : 1617330995766,
+      "stop" : 1617330995766,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "signin"
+  }, {
+    "name" : "parentSuite",
+    "value" : "cases.signin"
+  }, {
+    "name" : "suite",
+    "value" : "test_login"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestSignin"
+  }, {
+    "name" : "host",
+    "value" : "pactera1119"
+  }, {
+    "name" : "thread",
+    "value" : "4880-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "cases.signin.test_login"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "806b431e4e4d6eb4.json",
+  "parameterValues" : [ ]
+}

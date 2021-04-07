@@ -1,0 +1,53 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "cases.登录",
+    "children" : [ {
+      "name" : "test_login",
+      "children" : [ {
+        "name" : "TestSignin",
+        "children" : [ {
+          "name" : "test_login",
+          "uid" : "496e9b184afb6104",
+          "parentUid" : "d66d3f6deb9b871921ced129de6094ec",
+          "status" : "passed",
+          "time" : {
+            "start" : 1617156918428,
+            "stop" : 1617156918717,
+            "duration" : 289
+          },
+          "flaky" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "d66d3f6deb9b871921ced129de6094ec"
+      } ],
+      "uid" : "0fb345e0eb92dfd15b8bd35ba27b2df3"
+    } ],
+    "uid" : "087252c78f9ffbaf4d2c32e9c4bb2cac"
+  }, {
+    "name" : "cases.signin",
+    "children" : [ {
+      "name" : "test_login",
+      "children" : [ {
+        "name" : "TestSignin",
+        "children" : [ {
+          "name" : "test_login",
+          "uid" : "806b431e4e4d6eb4",
+          "parentUid" : "9e8353377c013af3b994fa856534d1b0",
+          "status" : "broken",
+          "time" : {
+            "start" : 1617330995576,
+            "stop" : 1617330995592,
+            "duration" : 16
+          },
+          "flaky" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "9e8353377c013af3b994fa856534d1b0"
+      } ],
+      "uid" : "eb3dd7ad4d8fd0b84f0036635fb234c6"
+    } ],
+    "uid" : "f80bdb4553d0a83516a06cea6620fcce"
+  } ]
+}
